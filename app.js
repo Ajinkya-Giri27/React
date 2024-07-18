@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 const heading1 = React.createElement(
   "h1",
@@ -19,7 +19,7 @@ root1.render(heading1);
 const parent = React.createElement("div", { id: "parent" }, [
   React.createElement("div", { id: "child" }, [
     React.createElement("h1", {}, "yo i'm child"),
-    React.createElement("h2", {}, "i'm sibling of child"),
+    React.createElement("h2", {}, "i'm sibling of childhsdbJHBJHJb"),
   ]),
   React.createElement("div", { id: "child2" }, [
     React.createElement("h1", {}, "yo i'm child"),
