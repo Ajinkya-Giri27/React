@@ -28,3 +28,22 @@ This repo is for React practice
 - you can write html like code directly in javascript
 - jsx and react are two differen things
 - jsx is used with react to describe UI
+- javascript does not contain jsx or jsx does not come built-in js
+- javascript engine does not understand jsx
+
+This is Component Composition
+
+<!--
+
+const HeadingComp = () => <h1>Functional component from 1st head</h1>;
+
+const HeadingComp2 = () => {
+return (
+
+<div id='container'>
+<HeadingComp />
+<h1 id='Heading'>Functional component in React</h1>
+<h2>you piece of shit</h2>
+</div>
+
+); -->
