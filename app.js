@@ -1,42 +1,92 @@
 import React, { createElement } from "react";
 import ReactDOM from "react-dom/client";
 
-const ele = <span>React element</span>;
-const heading = <h2> {ele} hello react by Ajinkya</h2>;
-const root = ReactDOM.createRoot(document.getElementById("root"));
-const root2 = ReactDOM.createRoot(document.getElementById("root2"));
-root.render(heading);
+/* 
+ - Header
+   - logo
+   - Nav-items
+ - Body
+   - Search Bar
+   - Resto Container
+       -Resto Card-cointainer
+          - Img
+          - Star Rating
+          - Name of res
+          - cuisine
+          - Delivery time
 
-// const click = () => {
-//   root2.render(heading);
-// };
 
-// const jsxheading =
-//   ((
-//     <h1 id="jsxh1" className="head" tabIndex="2">
-//       Hello world using JSX
-//     </h1>
-//   ),
-//   (
-//     <button id="btn1" onClick={click}>
-//       "click me"
-//     </button>
-//   ));
+*/
 
-const HeadingComp = () => <h1>Functional component from 1st head</h1>;
-const number = 1000;
-
-const HeadingComp2 = () => {
+const Header = () => {
   return (
-    <div id='container'>
-      <HeadingComp />
-      {heading}
-      <h2>{number + 100}</h2>
-      <h1 id='Heading'>Functional component in React</h1>
-      <h2>you piece of shit</h2>
+    <div className='header'>
+      <div className='logo-container'>
+        <img
+          className='logo'
+          src='https://penji.co/wp-content/uploads/2024/01/1.-Grubhub.jpg'
+        ></img>
+      </div>
+      <div className='nav-items'>
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
     </div>
   );
 };
-// root.render(<HeadingComp />);
-// root2.render(element);
-root2.render(<HeadingComp2 />);
+
+const Restrocard = ({ name, cuisine, rating, time }) => {
+  return (
+    <div className='res-card'>
+      <img
+        className='res-logo'
+        src='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/eohdm5sdnq6e2u46xeux'
+      ></img>
+      <h3>{name}</h3>
+      <h4>{cuisine}</h4>
+      <h4>{rating}</h4>
+      <h4>{time} </h4>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className='body'>
+      <div className='search'>Search</div>
+      <div className='restro-container'>
+        <Restrocard
+          name='Ajinkya Foods'
+          cuisine='Pizza, Burger, Sandwitch'
+          rating='4.7 stars'
+          time='40 Minutes'
+        />
+        <Restrocard
+          name='KFC'
+          cuisine='Buger, cococola, Frenchfries'
+          rating='4.8'
+          time='20 Minutes'
+        />
+        <Restrocard />
+        <Restrocard />
+        <Restrocard />
+        <Restrocard />
+      </div>
+    </div>
+  );
+};
+const AppLayout = () => {
+  return (
+    <div className='app'>
+      <Header />
+      <Body />
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);
