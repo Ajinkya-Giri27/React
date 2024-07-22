@@ -47,3 +47,31 @@ return (
 </div>
 
 ); -->
+
+# Food Ordering
+
+- Header
+
+  - logo
+  - Nav-items
+
+- Body
+  - Search Bar
+  - Resto Container
+    -Resto Card-cointainer (- Img - Star Rating - Name of res - cuisine - Delivery time)
+
+* Note :- Never Keep Your HardCoded Data in your component folder
+
+# File-Formatting
+
+Make various files for each componenet (for better practices)
+
+# Default import/Export
+
+export default Component/Variable_Name;
+import Component/Variable_Name from "path";
+
+# Named Import/Export
+
+export const Component;
+import {component} from "path"; (Do Not Forget curly braces {})

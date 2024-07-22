@@ -1,145 +1,144 @@
-import React, { createElement } from "react";
-import ReactDOM from "react-dom/client";
+export const CDN_URL =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-/* 
- - Header
-   - logo
-   - Nav-items
- - Body
-   - Search Bar
-   - Resto Container
-       -Resto Card-cointainer
-          - Img
-          - Star Rating
-          - Name of res
-          - cuisine
-          - Delivery time
-
-
-*/
-
-const Header = () => {
-  return (
-    <div className='header'>
-      <div className='logo-container'>
-        <img
-          className='logo'
-          src='https://penji.co/wp-content/uploads/2024/01/1.-Grubhub.jpg'
-        ></img>
-      </div>
-      <div className='nav-items'>
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const Restrocard = (props) => {
-  const { resData } = props;
-  const { cloudinaryImageId, name, costForTwo, avgRating, cuisines } =
-    resData?.info;
-  return (
-    <div className='res-card'>
-      <img
-        className='res-logo'
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-      ></img>
-      <h3>{name}</h3>
-      <h6>{cuisines.join(", ")}</h6>
-      <h6>{costForTwo}</h6>
-      <h6>{avgRating} Rating </h6>
-      {/* <h6>{resData.info.deliveryTime} Minutes</h6> */}
-    </div>
-  );
-};
-
-// const resList = {
-//   info: {
-//     id: "385824",
-//     name: "The Belgian Waffle Co.",
-//     cloudinaryImageId: "5116a385bac0548e06c33c08350fbf11",
-//     locality: "Sinchai Colony",
-//     areaName: "Mohan Nagar",
-//     costForTwo: "₹200 for two",
-//     cuisines: ["Waffle", "Desserts", "Ice Cream", "Beverages"],
-//     avgRating: 4.7,
-//     veg: true,
-//     parentId: "2233",
-//     avgRatingString: "4.7",
-//     totalRatingsString: "100+",
-//     sla: {
-//       deliveryTime: 46,
-//       lastMileTravel: 11.2,
-//       serviceability: "SERVICEABLE",
-//       slaString: "45-50 mins",
-//       lastMileTravelString: "11.2 km",
-//       iconType: "ICON_TYPE_EMPTY",
-//     },
-//     availability: {
-//       nextCloseTime: "2024-07-21 22:45:00",
-//       opened: true,
-//     },
-//     badges: {
-//       imageBadges: [
-//         {
-//           imageId: "v1695133679/badges/Pure_Veg111.png",
-//           description: "pureveg",
-//         },
-//       ],
-//     },
-//     isOpen: true,
-//     aggregatedDiscountInfoV2: {},
-//     type: "F",
-//     badgesV2: {
-//       entityBadges: {
-//         imageBased: {
-//           badgeObject: [
-//             {
-//               attributes: {
-//                 description: "pureveg",
-//                 imageId: "v1695133679/badges/Pure_Veg111.png",
-//               },
-//             },
-//           ],
-//         },
-//         textBased: {},
-//         textExtendedBadges: {},
-//       },
-//     },
-//     differentiatedUi: {
-//       displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-//       differentiatedUiMediaDetails: {
-//         mediaType: "ADS_MEDIA_ENUM_IMAGE",
-//         lottie: {},
-//         video: {},
-//       },
-//     },
-//     reviewsSummary: {},
-//     displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-//     restaurantOfferPresentationInfo: {},
-//     externalRatings: {
-//       aggregatedRating: {
-//         rating: "--",
-//       },
-//     },
-//     ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-//   },
-//   analytics: {},
-//   cta: {
-//     link: "https://www.swiggy.com/restaurants/the-belgian-waffle-co-sinchai-colony-mohan-nagar-chhindwara-385824",
-//     type: "WEBLINK",
-//   },
-// };
+export const LOGO_URl =
+  "https://penji.co/wp-content/uploads/2024/01/1.-Grubhub.jpg";
 
 const resList1 = [
+  {
+    info: {
+      id: "658210",
+      name: "The Fusion Lounge",
+      cloudinaryImageId: "fa4944f0cfdcbca2bec1f3ab8e3db3f7",
+      locality: "Triloki nagar",
+      areaName: "Railway Station",
+      costForTwo: "₹300 for two",
+      cuisines: [
+        "North Indian",
+        "South Indian",
+        "Chinese",
+        "Beverages",
+        "Fast Food",
+        "Desserts",
+      ],
+      avgRating: 4.2,
+      parentId: "395453",
+      avgRatingString: "4.2",
+      totalRatingsString: "100+",
+      sla: {
+        deliveryTime: 59,
+        lastMileTravel: 9.9,
+        serviceability: "SERVICEABLE",
+        slaString: "55-60 mins",
+        lastMileTravelString: "9.9 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-07-22 23:30:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "10% OFF",
+        subHeader: "UPTO ₹40",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/the-fusion-lounge-triloki-nagar-railway-station-chhindwara-658210",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "151656",
+      name: "Dev International",
+      cloudinaryImageId: "enj3srsnhbltbom2ovvh",
+      locality: "khajri road",
+      areaName: "Mohan Nagar",
+      costForTwo: "₹100 for two",
+      cuisines: ["North Indian", "Chinese", "Fast Food", "Beverages"],
+      avgRating: 4.3,
+      parentId: "71556",
+      avgRatingString: "4.3",
+      totalRatingsString: "100+",
+      sla: {
+        deliveryTime: 65,
+        lastMileTravel: 11.7,
+        serviceability: "SERVICEABLE",
+        slaString: "60-65 mins",
+        lastMileTravelString: "11.7 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-07-22 22:30:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "₹100 OFF",
+        subHeader: "ABOVE ₹249",
+        discountTag: "FLAT DEAL",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/dev-international-khajri-road-mohan-nagar-chhindwara-151656",
+      type: "WEBLINK",
+    },
+  },
   {
     info: {
       id: "234875",
@@ -154,15 +153,15 @@ const resList1 = [
       avgRatingString: "4.4",
       totalRatingsString: "500+",
       sla: {
-        deliveryTime: 45,
+        deliveryTime: 63,
         lastMileTravel: 12.6,
         serviceability: "SERVICEABLE",
-        slaString: "45-50 mins",
+        slaString: "60-65 mins",
         lastMileTravelString: "12.6 km",
         iconType: "ICON_TYPE_EMPTY",
       },
       availability: {
-        nextCloseTime: "2024-07-21 23:00:00",
+        nextCloseTime: "2024-07-22 23:00:00",
         opened: true,
       },
       badges: {},
@@ -226,15 +225,15 @@ const resList1 = [
       avgRatingString: "3.6",
       totalRatingsString: "500+",
       sla: {
-        deliveryTime: 59,
+        deliveryTime: 73,
         lastMileTravel: 10.5,
         serviceability: "SERVICEABLE",
-        slaString: "55-60 mins",
+        slaString: "70-75 mins",
         lastMileTravelString: "10.5 km",
         iconType: "ICON_TYPE_EMPTY",
       },
       availability: {
-        nextCloseTime: "2024-07-21 22:30:00",
+        nextCloseTime: "2024-07-22 22:30:00",
         opened: true,
       },
       badges: {
@@ -313,15 +312,15 @@ const resList1 = [
       avgRatingString: "4.3",
       totalRatingsString: "500+",
       sla: {
-        deliveryTime: 50,
+        deliveryTime: 56,
         lastMileTravel: 10,
         serviceability: "SERVICEABLE",
-        slaString: "45-50 mins",
+        slaString: "55-60 mins",
         lastMileTravelString: "10.0 km",
         iconType: "ICON_TYPE_EMPTY",
       },
       availability: {
-        nextCloseTime: "2024-07-21 22:30:00",
+        nextCloseTime: "2024-07-22 22:30:00",
         opened: true,
       },
       badges: {
@@ -379,178 +378,28 @@ const resList1 = [
   },
   {
     info: {
-      id: "658210",
-      name: "The Fusion Lounge",
-      cloudinaryImageId: "fa4944f0cfdcbca2bec1f3ab8e3db3f7",
-      locality: "Triloki nagar",
-      areaName: "Railway Station",
-      costForTwo: "₹300 for two",
-      cuisines: [
-        "North Indian",
-        "South Indian",
-        "Chinese",
-        "Beverages",
-        "Fast Food",
-        "Desserts",
-      ],
-      avgRating: 4.2,
-      parentId: "395453",
-      avgRatingString: "4.2",
-      totalRatingsString: "100+",
-      sla: {
-        deliveryTime: 48,
-        lastMileTravel: 9.9,
-        serviceability: "SERVICEABLE",
-        slaString: "45-50 mins",
-        lastMileTravelString: "9.9 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: {
-        nextCloseTime: "2024-07-21 23:30:00",
-        opened: true,
-      },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {},
-          textBased: {},
-          textExtendedBadges: {},
-        },
-      },
-      aggregatedDiscountInfoV3: {
-        header: "10% OFF",
-        subHeader: "UPTO ₹40",
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {},
-        },
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      restaurantOfferPresentationInfo: {},
-      externalRatings: {
-        aggregatedRating: {
-          rating: "--",
-        },
-      },
-      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-    },
-    analytics: {},
-    cta: {
-      link: "https://www.swiggy.com/restaurants/the-fusion-lounge-triloki-nagar-railway-station-chhindwara-658210",
-      type: "WEBLINK",
-    },
-  },
-  {
-    info: {
-      id: "150597",
-      name: "Scoops Fast Food And Ice Cream",
-      cloudinaryImageId: "fm3rs3g6z7ibfhesmxnu",
-      locality: "Irrigation Colony",
-      areaName: "Khajri Road",
-      costForTwo: "₹200 for two",
-      cuisines: ["Bakery", "Ice Cream", "Snacks", "Beverages"],
-      avgRating: 4,
-      veg: true,
-      parentId: "179482",
-      avgRatingString: "4.0",
-      totalRatingsString: "100+",
-      sla: {
-        deliveryTime: 57,
-        lastMileTravel: 11.4,
-        serviceability: "SERVICEABLE",
-        slaString: "55-60 mins",
-        lastMileTravelString: "11.4 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: {
-        nextCloseTime: "2024-07-21 22:30:00",
-        opened: true,
-      },
-      badges: {
-        imageBadges: [
-          {
-            imageId: "v1695133679/badges/Pure_Veg111.png",
-            description: "pureveg",
-          },
-        ],
-      },
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {
-            badgeObject: [
-              {
-                attributes: {
-                  description: "pureveg",
-                  imageId: "v1695133679/badges/Pure_Veg111.png",
-                },
-              },
-            ],
-          },
-          textBased: {},
-          textExtendedBadges: {},
-        },
-      },
-      aggregatedDiscountInfoV3: {
-        header: "15% OFF",
-        subHeader: "UPTO ₹45",
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {},
-        },
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      restaurantOfferPresentationInfo: {},
-      externalRatings: {
-        aggregatedRating: {
-          rating: "--",
-        },
-      },
-      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-    },
-    analytics: {},
-    cta: {
-      link: "https://www.swiggy.com/restaurants/scoops-fast-food-and-ice-cream-irrigation-colony-khajri-road-chhindwara-150597",
-      type: "WEBLINK",
-    },
-  },
-  {
-    info: {
-      id: "531441",
-      name: "Gourmet Ice Cream Cakes by Baskin Robbins",
-      cloudinaryImageId: "d679c532ca07a6f3fd6d89d603861412",
-      locality: "Satkar Square",
+      id: "151648",
+      name: "Mr. Gurung Momo & Chinese Corner",
+      cloudinaryImageId: "h7oibtpm7kqks8cqz3gh",
+      locality: "Teacher's Colony",
       areaName: "Mohan Nagar",
-      costForTwo: "₹200 for two",
-      cuisines: ["Ice Cream Cakes", "Desserts", "Ice Cream", "Bakery"],
-      avgRating: 5,
+      costForTwo: "₹150 for two",
+      cuisines: ["Momos", "Chinese", "Fast Food"],
+      avgRating: 4.1,
       veg: true,
-      parentId: "21932",
-      avgRatingString: "5.0",
-      totalRatingsString: "3",
+      parentId: "140255",
+      avgRatingString: "4.1",
+      totalRatingsString: "500+",
       sla: {
-        deliveryTime: 42,
-        lastMileTravel: 11.2,
+        deliveryTime: 68,
+        lastMileTravel: 11.8,
         serviceability: "SERVICEABLE",
-        slaString: "40-45 mins",
-        lastMileTravelString: "11.2 km",
+        slaString: "65-70 mins",
+        lastMileTravelString: "11.8 km",
         iconType: "ICON_TYPE_EMPTY",
       },
       availability: {
-        nextCloseTime: "2024-07-21 23:00:00",
+        nextCloseTime: "2024-07-22 23:00:00",
         opened: true,
       },
       badges: {
@@ -580,8 +429,9 @@ const resList1 = [
         },
       },
       aggregatedDiscountInfoV3: {
-        header: "50% OFF",
-        subHeader: "UPTO ₹80",
+        header: "40% OFF",
+        subHeader: "ABOVE ₹1500",
+        discountTag: "FLAT DEAL",
       },
       differentiatedUi: {
         displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
@@ -603,68 +453,7 @@ const resList1 = [
     },
     analytics: {},
     cta: {
-      link: "https://www.swiggy.com/restaurants/gourmet-ice-cream-cakes-by-baskin-robbins-satkar-square-mohan-nagar-chhindwara-531441",
-      type: "WEBLINK",
-    },
-  },
-  {
-    info: {
-      id: "496348",
-      name: "Pizza Box",
-      cloudinaryImageId: "n7wbtvlifwbw5y4a7rrv",
-      locality: "Sanchar Colony",
-      areaName: "Chhindwara Locality",
-      costForTwo: "₹300 for two",
-      cuisines: ["Pizzas", "Burgers", "Beverages"],
-      avgRating: 4.3,
-      veg: true,
-      parentId: "3045",
-      avgRatingString: "4.3",
-      totalRatingsString: "100+",
-      sla: {
-        deliveryTime: 59,
-        lastMileTravel: 11.5,
-        serviceability: "SERVICEABLE",
-        slaString: "55-60 mins",
-        lastMileTravelString: "11.5 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: {
-        nextCloseTime: "2024-07-21 22:00:00",
-        opened: true,
-      },
-      badges: {},
-      isOpen: true,
-      aggregatedDiscountInfoV2: {},
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {},
-          textBased: {},
-          textExtendedBadges: {},
-        },
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {},
-        },
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      restaurantOfferPresentationInfo: {},
-      externalRatings: {
-        aggregatedRating: {
-          rating: "--",
-        },
-      },
-      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-    },
-    analytics: {},
-    cta: {
-      link: "https://www.swiggy.com/restaurants/pizza-box-sanchar-colony-chhindwara-locality-chhindwara-496348",
+      link: "https://www.swiggy.com/restaurants/mr-gurung-momo-and-chinese-corner-teachers-colony-mohan-nagar-chhindwara-151648",
       type: "WEBLINK",
     },
   },
@@ -689,15 +478,15 @@ const resList1 = [
       avgRatingString: "4.3",
       totalRatingsString: "1K+",
       sla: {
-        deliveryTime: 41,
+        deliveryTime: 53,
         lastMileTravel: 11.1,
         serviceability: "SERVICEABLE",
-        slaString: "40-45 mins",
+        slaString: "50-55 mins",
         lastMileTravelString: "11.1 km",
         iconType: "ICON_TYPE_EMPTY",
       },
       availability: {
-        nextCloseTime: "2024-07-21 22:45:00",
+        nextCloseTime: "2024-07-22 22:45:00",
         opened: true,
       },
       badges: {
@@ -727,9 +516,8 @@ const resList1 = [
         },
       },
       aggregatedDiscountInfoV3: {
-        header: "₹100 OFF",
-        subHeader: "ABOVE ₹249",
-        discountTag: "FLAT DEAL",
+        header: "60% OFF",
+        subHeader: "UPTO ₹120",
       },
       differentiatedUi: {
         displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
@@ -770,15 +558,15 @@ const resList1 = [
       avgRatingString: "4.8",
       totalRatingsString: "20+",
       sla: {
-        deliveryTime: 40,
+        deliveryTime: 58,
         lastMileTravel: 11.2,
         serviceability: "SERVICEABLE",
-        slaString: "40-45 mins",
+        slaString: "55-60 mins",
         lastMileTravelString: "11.2 km",
         iconType: "ICON_TYPE_EMPTY",
       },
       availability: {
-        nextCloseTime: "2024-07-21 23:00:00",
+        nextCloseTime: "2024-07-22 23:00:00",
         opened: true,
       },
       badges: {
@@ -837,6 +625,243 @@ const resList1 = [
   },
   {
     info: {
+      id: "385824",
+      name: "The Belgian Waffle Co.",
+      cloudinaryImageId: "5116a385bac0548e06c33c08350fbf11",
+      locality: "Sinchai Colony",
+      areaName: "Mohan Nagar",
+      costForTwo: "₹200 for two",
+      cuisines: ["Waffle", "Desserts", "Ice Cream", "Beverages"],
+      avgRating: 4.7,
+      veg: true,
+      parentId: "2233",
+      avgRatingString: "4.7",
+      totalRatingsString: "100+",
+      sla: {
+        deliveryTime: 66,
+        lastMileTravel: 11.2,
+        serviceability: "SERVICEABLE",
+        slaString: "65-70 mins",
+        lastMileTravelString: "11.2 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-07-22 22:45:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      aggregatedDiscountInfoV2: {},
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/the-belgian-waffle-co-sinchai-colony-mohan-nagar-chhindwara-385824",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "531441",
+      name: "Gourmet Ice Cream Cakes by Baskin Robbins",
+      cloudinaryImageId: "d679c532ca07a6f3fd6d89d603861412",
+      locality: "Satkar Square",
+      areaName: "Mohan Nagar",
+      costForTwo: "₹200 for two",
+      cuisines: ["Ice Cream Cakes", "Desserts", "Ice Cream", "Bakery"],
+      avgRating: 5,
+      veg: true,
+      parentId: "21932",
+      avgRatingString: "5.0",
+      totalRatingsString: "3",
+      sla: {
+        deliveryTime: 59,
+        lastMileTravel: 11.2,
+        serviceability: "SERVICEABLE",
+        slaString: "55-60 mins",
+        lastMileTravelString: "11.2 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-07-22 23:00:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "50% OFF",
+        subHeader: "UPTO ₹80",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/gourmet-ice-cream-cakes-by-baskin-robbins-satkar-square-mohan-nagar-chhindwara-531441",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "150597",
+      name: "Scoops Fast Food And Ice Cream",
+      cloudinaryImageId: "fm3rs3g6z7ibfhesmxnu",
+      locality: "Irrigation Colony",
+      areaName: "Khajri Road",
+      costForTwo: "₹200 for two",
+      cuisines: ["Bakery", "Ice Cream", "Snacks", "Beverages"],
+      avgRating: 4,
+      veg: true,
+      parentId: "179482",
+      avgRatingString: "4.0",
+      totalRatingsString: "100+",
+      sla: {
+        deliveryTime: 75,
+        lastMileTravel: 11.4,
+        serviceability: "SERVICEABLE",
+        slaString: "75-80 mins",
+        lastMileTravelString: "11.4 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-07-22 22:30:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "15% OFF",
+        subHeader: "UPTO ₹45",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/scoops-fast-food-and-ice-cream-irrigation-colony-khajri-road-chhindwara-150597",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
       id: "151518",
       name: "Bakery World",
       cloudinaryImageId: "mt2aggiscfl3yviatwng",
@@ -844,21 +869,21 @@ const resList1 = [
       areaName: "Parasia Road",
       costForTwo: "₹250 for two",
       cuisines: ["Bakery", "Ice Cream", "Snacks", "Beverages"],
-      avgRating: 4.3,
+      avgRating: 4.4,
       veg: true,
       parentId: "40363",
-      avgRatingString: "4.3",
+      avgRatingString: "4.4",
       totalRatingsString: "100+",
       sla: {
-        deliveryTime: 47,
+        deliveryTime: 65,
         lastMileTravel: 12.3,
         serviceability: "SERVICEABLE",
-        slaString: "45-50 mins",
+        slaString: "60-65 mins",
         lastMileTravelString: "12.3 km",
         iconType: "ICON_TYPE_EMPTY",
       },
       availability: {
-        nextCloseTime: "2024-07-21 22:30:00",
+        nextCloseTime: "2024-07-22 22:30:00",
         opened: true,
       },
       badges: {
@@ -914,37 +939,4 @@ const resList1 = [
   },
 ];
 
-const Body = () => {
-  return (
-    <div className='body'>
-      <div className='search'>Search</div>
-      <div className='restro-container'>
-        {/* <Restrocard resData={resList1[0]} />
-        <Restrocard resData={resList1[1]} />
-        <Restrocard resData={resList1[2]} />
-        <Restrocard resData={resList1[3]} />
-        <Restrocard resData={resList1[4]} />
-        <Restrocard resData={resList1[5]} />
-        <Restrocard resData={resList1[6]} />
-        <Restrocard resData={resList1[7]} />
-        <Restrocard resData={resList1[8]} />
-        <Restrocard resData={resList1[9]} /> */}
-
-        {resList1.map((info) => (
-          <Restrocard resData={info} />
-        ))}
-      </div>
-    </div>
-  );
-};
-const AppLayout = () => {
-  return (
-    <div className='app'>
-      <Header />
-      <Body />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default resList1;
