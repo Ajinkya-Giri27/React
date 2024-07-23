@@ -75,3 +75,14 @@ import Component/Variable_Name from "path";
 
 export const Component;
 import {component} from "path"; (Do Not Forget curly braces {})
+
+# React Hooks
+
+- Hooks are Nothing but a normal javascript utility functions.
+- They are provided to us by React to create a super powerful variable.
+- There are two very Important Hooks :-
+
+  - useState()
+  - useEffect()
+
+- useState() :- whenever a state variable updates or chnages react re-renders the component.
