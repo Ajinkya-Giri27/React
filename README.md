@@ -68,10 +68,10 @@ Make various files for each componenet (for better practices)
 
 # Default import/Export
 
-export default Component/Variable_Name;
-import Component/Variable_Name from "path";
+- export default Component/Variable_Name;
+- import Component/Variable_Name from "path";
 
 # Named Import/Export
 
-export const Component;
-import {component} from "path"; (Do Not Forget curly braces {})
+- export const Component;
+- import {component} from "path"; (Do Not Forget curly braces {})
