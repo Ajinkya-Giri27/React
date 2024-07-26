@@ -73,21 +73,23 @@ Make various files for each componenet (for better practices)
 
 # Named Import/Export
 
-<<<<<<< HEAD
-export const Component;
-import {component} from "path"; (Do Not Forget curly braces {})
+- export const Component;
+- import {component} from "path"; (Do Not Forget curly braces {})
 
 # React Hooks
 
 - Hooks are Nothing but a normal javascript utility functions.
+- They are functions that let you use state and other react features without writing a class.
+- Introduced in React 16.
+- They provide a more functional approach to working with React.
 - They are provided to us by React to create a super powerful variable.
 - There are two very Important Hooks :-
 
   - useState()
   - useEffect()
 
-- useState() :- whenever a state variable updates or chnages react re-renders the component.
-=======
-- export const Component;
-- import {component} from "path"; (Do Not Forget curly braces {})
->>>>>>> origin/main
+- useState() :-
+  - whenever a state variable updates or changes react re-renders the component.
+  - Declares a state variable that you can update directly.
+
+# Monolith Architecture

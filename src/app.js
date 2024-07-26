@@ -13,5 +13,14 @@ const AppLayout = () => {
   );
 };
 
+// const Myfunc = () => {
+//   x = "javascript";
+//   y = 2;
+//   z = 4;
+
+//   return x + y + z;
+// };
+// console.log(Myfunc());
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout />);

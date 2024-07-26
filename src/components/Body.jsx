@@ -1,10 +1,15 @@
 import resList1 from "../utils/config";
 import Restrocard from "./RestroCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Body = () => {
   const [restaurantList, setrestaurantList] = useState(resList1);
 
+  useEffect(() => {
+    console.log("use effect called");
+  }, []);
+
+  console.log("body Rendered");
   return (
     <div className='body'>
       <div className='filter'>
@@ -22,7 +27,7 @@ const Body = () => {
         </button>
       </div>
       <div className='restro-container'>
-        {restaurantList.map((info, i) => (
+        {restaurantList.map((info) => (
           <Restrocard key={info.info.id} resData={info} />
         ))}
       </div>
